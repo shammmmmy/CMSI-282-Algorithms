@@ -11,11 +11,12 @@ Takes a dataset of doubles and BucketSorts them (Insert Sort is also used for in
 Monte Carlo simulation of the card game Crown and Anchor
 Simulation has the option to change the total number of simulations (args[0]) and the amount of money bet each simulation (args[1]).
 
+#### Math Methods
+Manual implementation of various math algorithms for popular math functions. Implemented recursively and iteratively.
+
 #### Select
 Takes a dataset of integers plus int k, and outputs the kth smallest number in the dataset.
 
-#### Math Methods
-Manual implementation of various math algorithms for popular math functions. Implemented recursively and iteratively.
 
 #### Sumo Solver
 Solves the following problem:   
