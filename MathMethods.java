@@ -43,9 +43,9 @@ public class MathMethods extends java.lang.Object {
 	}
 
 	public static BigInteger fibonacci(int n) {
-		BigInteger temp = new BigInteger("1");
+		BigInteger temp = new BigInteger("0");
 		BigInteger result = new BigInteger("0");
-		BigInteger previousResult = new BigInteger("0");
+		BigInteger previousResult = new BigInteger("1");
 		for (int i = 0; i < n; i++) {
 			result = result.add(previousResult);
 			previousResult = temp;
@@ -54,11 +54,8 @@ public class MathMethods extends java.lang.Object {
 		return result;
 	}
 
-	public static long gcd(long m, long n) {
-		long max = Math.max(m, n);
-		long min = Math.min(m, n);
-
-		return recurseGCD(max, min);
+	public static long gcd(long x, long y) {
+		return recurseGCD(Math.max(x, y), Math.min(x, y));
 	}
 
 	private static long recurseGCD(long max, long min) {
@@ -70,8 +67,8 @@ public class MathMethods extends java.lang.Object {
 		return min;
 	}
 
-	public static long lcm(long m, long n) {
-		return (m * n) / gcd(m, n);
+	public static long lcm(long x, long y) {
+		return (x * y) / gcd(x, y);
 	}
 
 	public static double poly(double x, double[] coeff) {
@@ -118,9 +115,9 @@ public class MathMethods extends java.lang.Object {
 	}
 
 	private static double recursePower(double x, int n) {
-		double result = 0;
+		double result = 1;
 		if (n == 0) {
-			return 1;
+			return result;
 		} else if (n % 2 == 1) {
 			return x * power(x, (n - 1));
 		} else {
